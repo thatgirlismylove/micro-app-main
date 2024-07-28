@@ -1,6 +1,12 @@
 import { createApp } from 'vue'
+
+// 全局样式会应用于 所有子应用, 建议页面样式使用 scoped 进行隔离
+// 全局样式文件可以使用特定的css前缀,例如 : main-app-title 代替 title
+
 import './style.css'
 import App from './App.vue'
+
+import router from './router';
 
 import microApp from '@micro-zoe/micro-app'
 
@@ -24,7 +30,7 @@ microApp.start({
     },
 })
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
 
 // 预加载vite子应用
 microApp.preFetch([

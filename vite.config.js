@@ -10,6 +10,6 @@ export default defineConfig({
     open: true
   },
   css: {
-    // postcss
+    postcss: {}
   }
 })
