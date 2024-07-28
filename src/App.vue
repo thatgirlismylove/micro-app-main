@@ -6,7 +6,10 @@
   <div>
     <p class="title">Vite + Vue 主应用</p>
   </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <div class="container">
+    <router-link to="/test">主应用 test</router-link>
+    <router-link to="/">子应用 vite + vue3</router-link>
+  </div>
   <router-view></router-view>
 </template>
 
@@ -38,5 +41,11 @@ function error() {
   font-weight: 600;
   font-size: 20px;
   color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 </style>
